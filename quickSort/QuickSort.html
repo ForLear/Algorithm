@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>QuickSort 快速排序</title>
+</head>
+<body>
+  
+</body>
+<script>
+  // 快速排序方法   (使用递归)
+  let quickSort = function(arr){
+    // 判断数组长度是否小于等于1,如果是则直接返回数组;   (递归执行到最后传进来的数组中只剩下一个值,便不用继续执行排序)
+    if(arr.length <= 1) return arr;
+    // 创建枢轴保存数据,枢轴取数组长度中间的那个值;   根据数组长度四舍五入取整,将数组分为left(小),pivot,right(大)三个部分
+    let pivotIndex = Math.floor(arr.length/2)
+    // 取到枢轴的值
+    let pivot = arr.splice(pivotIndex,1)[0]
+
+    // 保存比枢轴小/大的值
+    let left = []
+    let right = []
+
+    for(let i=0;i<arr.length;i++){
+      // 如果比枢轴小,push进left数组,否则push进right数组
+      if(arr[i] < pivot){
+        left.push(arr[i])
+      }else{
+        right.push(arr[i])
+      }
+    }
+    
+    // 返回值调用quickSort方法自身(递归),将left/right数组重复排序操作,直到数组中只剩最后一个值,则排序完成
+    // concat方法拼接数组
+    return quickSort(left).concat([pivot],quickSort(right))
+  }
+</script>
+</html>
