@@ -1,6 +1,10 @@
 # Algorithm
 算法学习
 
+算法时间复杂度的表示法O(n²)、O(n)、O(1)、O(nlogn)
+https://www.zhihu.com/question/21387264
+
+
 最优时间复杂度  O(nlogn)
 为什么要学习O(n^2)的排序算法?
 >1.相对基础
