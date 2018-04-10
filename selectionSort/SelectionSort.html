@@ -11,13 +11,19 @@
 </body>
 <script>
     let selectionSort = function(arr){
+        // 第一次循环数组,声明一个minIndex储存最小值
         for(let i=0;i<arr.length;i++){
+            // 将当前循环的次数赋给minIndex,比如当前是第一次进入循环,i和minIndex都为0,代表数组下标为0的第一个数组元素
             let minIndex = i;
+            // 循环数组,从i+1的位置开始,也就是让这一次循环从之前循环的后一个元素开始
             for(let j=i+1;j<arr.length;j++){
+                // 循环一轮过后,minIndex中保存的就是数组中最小值的下标
                 if (arr[j] < arr[minIndex]) {
+                // 如果后一个元素比第一个元素小,则把后一个元素的下标赋给最小值minIndex
                     minIndex = j
                 }
             }
+            // 交换最小值与当前循环到的位置的值
             [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]]
         }
         return arr
