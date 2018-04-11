@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>InsertionSort</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 插入排序
+    let insertionSort = function(arr) {
+        // 先进行一次循环,遍历数组arr中的元素,因为i=0时第一个元素的位置不需要向前比较更改,所以从第二个元素开始
+        for(let i=1;i<arr.length;i++){
+            // 第二层循环从i的位置开始,向前遍历,直到第二个元素的位置,比较它和第一个元素
+            for(let j=i;j>0;j--){
+                if(arr[j] < arr[j-1]){
+                    [arr[j],arr[j-1]] = [arr[j-1],arr[j]]
+                }else{
+                    break
+                }
+            }
+        } 
+        return arr
+    }
+
+    // 上面写法的简化
+    let insertionSort1 = function(arr) {
+        for(let i=0;i<arr.length;i++){
+            // 将判断条件加入for循环,满足j>0且后一个元素小于前一个元素,才进行交换,插入排序达成调解可以提前结束第二层循环
+            for(let j=i;j>0 && arr[j]<arr[j-1];j--){
+                [arr[j], arr[j-1]] = [arr[j-1], arr[j]]
+            }
+        }
+        return arr
+    }
+</script>
+</html>
