@@ -28,7 +28,7 @@
 
     // 上面写法的简化
     let insertionSort1 = function(arr) {
-        for(let i=0;i<arr.length;i++){
+        for(let i=1;i<arr.length;i++){
             // 将判断条件加入for循环,满足j>0且后一个元素小于前一个元素,才进行交换,插入排序达成调解可以提前结束第二层循环
             for(let j=i;j>0 && arr[j]<arr[j-1];j--){
                 [arr[j], arr[j-1]] = [arr[j-1], arr[j]]
