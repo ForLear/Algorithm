@@ -4,7 +4,7 @@ export const commonParams = {
 }
 
 export const options = {
-    // param: 'callback=initMap'
+    param: 'callback=initMap'
 }
 
 export const ERR_OK = 0
