@@ -1,10 +1,9 @@
-# HTML编码格式规范
+# HTML（包含VUE中HTML部分）编码格式规范
 <br>
 
 > 代码规范
 
 ### 1. 元素及标签闭合
-
 HTML元素共有以下5种：
 - 空元素：area、base、br、col、command、embed、hr、img、input、keygen、link、meta、param、source、track、wbr
 - 原始文本元素：script、style
@@ -42,7 +41,6 @@ HTML元素共有以下5种：
 更多关于元素及标签关闭：<a href="https://www.w3.org/TR/html5/syntax.html#elements-0" target="_blank">#Elements</a>
 
 ### 2. 书写风格
-
 **HTML代码大小写**
 HTML标签名、类名、标签属性和大部分属性值统一用小写
 ```html
@@ -54,7 +52,6 @@ HTML标签名、类名、标签属性和大部分属性值统一用小写
 <DIV CLASS="PARAS"></DIV>
 ```
 ### 3. 类型属性
-
 不需要为 CSS、JS 指定类型属性，HTML5 中默认已包含
 ```html
 <!-- 推荐 -->
@@ -67,7 +64,6 @@ HTML标签名、类名、标签属性和大部分属性值统一用小写
 ```
 
 ### 4. 元素属性
-
 元素属性值使用双引号语法
 ```html
 <!-- 推荐 -->
@@ -80,7 +76,6 @@ HTML标签名、类名、标签属性和大部分属性值统一用小写
 更多关于元素属性：<a href="https://www.w3.org/TR/html5/syntax.html#attributes-0" target="_blank">#Attributes</a>
 
 ### 5. 特殊字符引用
-
 在 HTML 中不能使用小于号 “<” 和大于号 “>”等特殊字符，浏览器会将它们作为标签解析，若要正确显示，在 HTML 源代码中使用字符实体
 ```html
 <!-- 推荐 -->
@@ -92,7 +87,6 @@ HTML标签名、类名、标签属性和大部分属性值统一用小写
 更多关于符号引用：<a href="https://www.w3.org/TR/html5/syntax.html#character-references" target="_blank">#Character references</a>
 
 ### 6. 代码缩进
-
 统一使用四个空格进行代码缩进，使得各编辑器表现一致（各编辑器有相关配置）
 ```html
 <div class="paras">
@@ -101,7 +95,6 @@ HTML标签名、类名、标签属性和大部分属性值统一用小写
 ```
 
 ### 7. 代码嵌套
-
 元素嵌套规范，每个块状元素独立一行，内联元素可选
 ```html
 <!-- 推荐 -->
@@ -348,3 +341,173 @@ CSS3 浏览器私有前缀在前，标准前缀在后
 
 # 命名规范
 <br>
+
+### 1. 文件命名
+确保文件命名总是以小写字母开头而不是数字，遵循驼峰格式，不带下划线及其他标点符号，如：
+```html
+home.vue
+homePage.vue
+```
+
+### 2. ClassName命名
+ClassName的命名应该尽量精短、明确，必须以字母开头命名，且全部字母为小写，单词之间统一使用下划线 “_” 连接
+<br>
+注：ad、banner、gg、guanggao 等有机会和广告挂勾的字眠不建议直接用来做ClassName，因为有些浏览器插件（Chrome的广告拦截插件等）会直接过滤这些类名
+<br>
+广告的英文或拼音类名不应该出现
+```html
+<!-- 避免出现的关键字 -->
+<div class="ad"></div>
+<div class="fuck"></div>
+<div class="jer"></div>
+<div class="sm"></div>
+<div class="gcd"></div> 
+<div class="ass"></div> 
+<div class="KMT"></div> 
+...
+```
+
+<br>
+<br>
+
+# JS代码规范
+<br>
+
+### 1. 单行代码块
+在单行代码块中使用空格
+```javascript
+// 推荐
+function foo () { return true }
+if (foo) { bar = 0 }
+
+// 不推荐
+function foo () {return true}
+if (foo) {bar = 0}
+```
+
+### 2. 大括号风格
+在编程过程中，大括号风格与缩进风格紧密联系，用来描述大括号相对代码块位置的方法有很多。在 JavaScript 中，主要有三种风格，如下：
+- One True Brace Style
+```javascript
+if (foo) {
+  bar()
+} else {
+  baz()
+}
+```
+<br>
+
+- Stroustrup
+```javascript
+if (foo) {
+  bar()
+}
+else {
+  baz()
+}
+```
+<br>
+
+- Allman
+```javascript
+if (foo)
+{
+  bar()
+}
+else
+{
+  baz()
+}
+```
+**团队约定使用 One True Brace Style 风格**
+
+### 3. 变量命名
+当命名变量时，主流分为驼峰式命名（variableName）和下划线命名（variable_name）
+**团队约定使用驼峰式命名**
+
+### 4. 拖尾逗号
+在 ECMAScript5 里面，对象字面量中的拖尾逗号是合法的，但在 IE8（非 IE8 文档模式）下，当出现拖尾逗号，则会抛出错误。
+<br>
+
+拖尾逗号的好处是，简化了对象和数组添加或删除元素，我们只需要修改新增的行即可，并不会增加差异化的代码行数。
+```javascript
+// 建议使用情况
+var foo = {
+  name: 'foo',
+  age: '22',
+}
+
+// 不建议使用情况
+var foo = { name: 'foo', age: '22',}
+```
+
+### 5. 逗号空格
+逗号前后的空格可以提高代码的可读性，团队约定在逗号后面使用空格，逗号前面不加空格。
+```javascript
+// 推荐
+var foo = 1, bar = 2
+
+// 不推荐
+var foo = 1,bar = 2
+var foo = 1 , bar = 2
+var foo = 1 ,bar = 2
+```
+
+### 6. 逗号风格
+逗号分隔列表时，在 JavaScript 中主要有两种逗号风格：
+- 标准风格，逗号放置在当前行的末尾
+- 逗号前置风格，逗号放置在下一行的开始位置
+```javascript
+// 推荐
+var foo = 1,
+    bar = 2
+
+var foo = ['name',
+            'age']
+
+// 不推荐
+var foo = 1
+,
+bar = 2
+
+var foo = 1
+, bar = 2
+
+var foo = ['name'
+          , 'age']
+```
+**团队约定使用标准风格**
+
+### 7. 计算属性的空格
+```javascript
+// 推荐
+obj['foo']
+
+// 不推荐
+obj['foo' ]
+obj[ 'foo']
+obj[ 'foo' ]
+```
+**团队约定在对象的计算属性内，禁止使用空格**
+
+### 8. 拖尾换行
+在非空文件中，存在拖尾换行是一个常见的 UNIX 风格，它的好处是可以方便在串联和追加文件时不会打断 Shell 的提示。在日常的项目中，保留拖尾换行的好处是，可以减少版本控制时的代码冲突。
+```javascript
+// 推荐
+function func () {
+  // do something
+}
+  // 此处是新的一行
+function other () {
+  // do something
+}
+  // 此处是新的一行
+  
+// 不推荐
+function func () {
+  // do something
+}
+function other () {
+  // do something
+}
+```
