@@ -495,19 +495,85 @@ obj[ 'foo' ]
 ```javascript
 // 推荐
 function func () {
-  // do something
+    // do something
 }
-  // 此处是新的一行
+    // 此处是新的一行
 function other () {
-  // do something
+    // do something
 }
-  // 此处是新的一行
-  
+    // 此处是新的一行
+
 // 不推荐
 function func () {
-  // do something
+    // do something
 }
 function other () {
-  // do something
+    // do something
 }
+```
+
+### 9. 函数调用
+```javascript
+// 推荐
+fn()
+
+// 不推荐
+fn ()
+fn
+()
+```
+**为了避免语法错误，团队约定在函数调用时，禁止使用空格**
+
+### 10. 缩进
+**团队暂定约定为4空格**
+
+### 11. 对象字面量的键值缩进
+```javascript
+// 推荐
+var obj = { 'own': 'two' }
+
+// 不推荐
+var obj = { 'own' : 'two' }
+```
+**团队约定对象字面量的键和值之间不能存在空格，且要求对象字面量的冒号和值之间存在一个空格**
+
+### 12. 构造函数首字母大写
+在 JavaScript 中 new 操作符用来创建某个特定类型的对象的一个实例，该类型的对象是由一个构造函数表示的。由于构造函数只是常规函数，唯一区别是使用 new 来调用。所以我们团队约定构造函数的首字母要大小，以此来区分构造函数和普通函数。
+```javascript
+// 推荐
+var fooItem = new Foo()
+
+// 不推荐
+var fooItem = new foo()
+```
+
+### 13. 构造函数的参数
+在 JavaScript 中，通过 new 调用构造函数时，如果不带参数，可以省略后面的圆括号。但这样会造成与整体的代码风格不一致，所以团队约定使用圆括号
+```javascript
+// 推荐
+var person = new Person()
+
+// 不推荐
+var person = new Person
+```
+
+### 14. 链式调用
+链式调用如果放在同一行，往往会造成代码的可读性差，但有些时候，短的链式调用并不会影响美观。团队约定一行最多只能有四个链式调用，超过就要求换行。
+
+### 15. 空行
+空白行对于分离代码逻辑有帮助，但过多的空行会占据屏幕的空间，影响可读性。团队约定最大连续空行数为 2
+```javascript
+// 推荐
+var own = 1
+    // 1
+    // 2
+var two = 2
+
+// 不推荐
+var own = 1
+    // 1
+    // 2
+    // 3
+    // 4
+var two = 2
 ```
