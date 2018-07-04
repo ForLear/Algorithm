@@ -41,6 +41,92 @@ HTML元素共有以下5种：
 ```
 更多关于元素及标签关闭：<a href="https://www.w3.org/TR/html5/syntax.html#elements-0" target="_blank">#Elements</a>
 
+### 2. 书写风格
+
+**HTML代码大小写**
+HTML标签名、类名、标签属性和大部分属性值统一用小写
+```html
+<!-- 推荐 -->
+<div class="paras"></div>
+
+<!-- 不推荐 -->
+<div class="PARAS"></div>
+<DIV CLASS="PARAS"></DIV>
+```
+### 3. 类型属性
+不需要为 CSS、JS 指定类型属性，HTML5 中默认已包含
+```html
+<!-- 推荐 -->
+<link rel="stylesheet" href="" >
+<script src=""></script>
+
+<!-- 不推荐 -->
+<link rel="stylesheet" type="text/css" href="" >
+<script type="text/javascript" src="" ></script>
+```
+
+### 4. 元素属性
+元素属性值使用双引号语法
+```html
+<!-- 推荐 -->
+<input type="text">
+
+<!-- 不推荐 -->
+<input type=text>	
+<input type='text'>
+```
+更多关于元素属性：<a href="https://www.w3.org/TR/html5/syntax.html#attributes-0" target="_blank">#Attributes</a>
+
+### 5. 特殊字符引用
+在 HTML 中不能使用小于号 “<” 和大于号 “>”等特殊字符，浏览器会将它们作为标签解析，若要正确显示，在 HTML 源代码中使用字符实体
+```html
+<!-- 推荐 -->
+<a href="#">tag&gt;&gt;</a>
+
+<!-- 不推荐 -->
+<a href="#">tag>></a>
+```
+更多关于符号引用：<a href="https://www.w3.org/TR/html5/syntax.html#character-references" target="_blank">#Character references</a>
+
+### 6. 代码缩进
+统一使用四个空格进行代码缩进，使得各编辑器表现一致（各编辑器有相关配置）
+```html
+<div class="paras">
+    <a href="#"></a>
+</div>
+```
+
+### 7. 代码嵌套
+元素嵌套规范，每个块状元素独立一行，内联元素可选
+```html
+<!-- 推荐 -->
+<div>
+    <h1></h1>
+    <p></p>
+</div>	
+<p><span></span><span></span></p>
+
+<!-- 不推荐 -->
+<div>
+    <h1></h1><p></p>
+</div>	
+<p> 
+    <span></span>
+    <span></span>
+</p>
+```
+<br>
+段落元素与标题元素只能嵌套内联元素
+```html
+<!-- 推荐 -->
+<h1><span></span></h1>
+<p><span></span><span></span></p>
+
+<!-- 不推荐 -->
+<h1><div></div></h1>
+<p><div></div><div></div></p>
+```
+
 <br>
 <br>
 
@@ -53,11 +139,11 @@ HTML元素共有以下5种：
 
 样式书写一般有两种格式：一种是紧凑格式（Compact）
 ```css
-.className { display: block;width: 50%; }
+.paras { display: block;width: 50%; }
 ```
 一种是紧凑格式（Expanded）
 ```javascript
-.className {
+.paras {
     display: block;
     width: 50%;
 }
@@ -69,7 +155,7 @@ HTML元素共有以下5种：
 样式选择器，属性名，属性值关键字全部使用小写字母书写，属性字符串允许使用大小写。
 ```css
 /* 推荐 */
-.className{
+.paras{
 	display:block;
 }
 	
@@ -86,21 +172,21 @@ HTML元素共有以下5种：
 - 不使用无具体语义定义的标签选择器
 ```css
 /* 推荐 */
-.className {}
-.className li {}
-.className li p{}
+.paras {}
+.paras li {}
+.paras li p{}
 
 /* 不推荐 */
 *{}
-#className {}
-.className div{}
+#paras {}
+.paras div{}
 ```
 
 ### 4. 代码缩进
 
 统一使用四个空格进行代码缩进，使得各编辑器表现一致（各编辑器有相关配置）
 ```css
-.className {
+.paras {
     width: 100%;
     height: 100%;
 }
@@ -110,7 +196,7 @@ HTML元素共有以下5种：
 
 每个属性声明末尾都要加分号；
 ```css
-.className {
+.paras {
     width: 100%;
     height: 100%;
 }
@@ -121,12 +207,12 @@ HTML元素共有以下5种：
 左括号与类名之间一个空格，冒号与属性值之间一个空格
 ```css
 /* 推荐 */
-.className {
+.paras {
     width: 100%;
 }
 
 /* 不推荐 */
-.className{
+.paras{
     width:100%;
 }
 ```
@@ -134,12 +220,12 @@ HTML元素共有以下5种：
 逗号分隔的取值，逗号之后一个空格
 ```css
 /* 推荐 */
-.className {
+.paras {
     box-shadow: 1px 1px 1px #333, 2px 2px 2px #ccc;
 }
 
 /* 不推荐 */
-.className{
+.paras{
     width:100%;
 }
 ```
@@ -147,7 +233,7 @@ HTML元素共有以下5种：
 为单个css选择器或新申明开启新行
 ```css
 /* 推荐 */
-.className, 
+.paras, 
 .className_logo, 
 .className_hd {
     color: #ff0;
@@ -157,7 +243,7 @@ HTML元素共有以下5种：
 }
 
 /* 不推荐 */
-.className,className_logo,.className_hd {
+.paras,className_logo,.className_hd {
     color: #ff0;
 }.nav{
     color: #fff;
@@ -167,12 +253,12 @@ HTML元素共有以下5种：
 颜色值 rgb() rgba() hsl() hsla() rect() 中不需有空格，且取值不要带有不必要的 0
 ```css
 /* 推荐 */
-.className {
+.paras {
     color: rgba(255,255,255,.5);
 }
 
 /* 不推荐 */
-.className {
+.paras {
     color: rgba( 255, 255, 255, 0.5 );
 }
 ```
@@ -180,12 +266,12 @@ HTML元素共有以下5种：
 属性值十六进制数值能用简写的尽量用简写
 ```css
 /* 推荐 */
-.className {
+.paras {
     color: #fff;
 }
 
 /* 不推荐 */
-.className {
+.paras {
     color: #ffffff;
 }
 ```
@@ -193,12 +279,12 @@ HTML元素共有以下5种：
 不要为 0 指明单位
 ```css
 /* 推荐 */
-.className {
+.paras {
     margin: 0 10px;
 }
 
 /* 不推荐 */
-.className {
+.paras {
     margin: 0px 10px;
 }
 ```
@@ -208,12 +294,12 @@ HTML元素共有以下5种：
 css属性值需要用到引号时，统一使用单引号
 ```css
 /* 推荐 */
-.className {
+.paras {
     font-family: 'Hiragino Sans GB';
 }
 
 /* 不推荐 */
-.className {
+.paras {
     font-family: "Hiragino Sans GB";
 }
 ```
@@ -227,7 +313,7 @@ css属性值需要用到引号时，统一使用单引号
 4. 其他属性（CSS3）：content / cursor / border-radius / box-shadow / text-shadow / background:linear-gradient …
 ```css
 /* 例如 */
-.className {
+.paras {
     display: block;
     position: relative;
     float: left;
@@ -251,7 +337,7 @@ css属性值需要用到引号时，统一使用单引号
 CSS3 浏览器私有前缀在前，标准前缀在后
 ```css
 /* 例如 */
-.className {
+.paras {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -o-border-radius: 10px;
