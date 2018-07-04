@@ -166,7 +166,7 @@ ___
 }
 ```
 
-##### 属性值引号
+##### 7. 属性值引号
 
 css属性值需要用到引号时，统一使用单引号
 ```css
@@ -181,7 +181,7 @@ css属性值需要用到引号时，统一使用单引号
 }
 ```
 
-##### 属性书写顺序
+##### 8. 属性书写顺序
 
 建议遵循以下顺序：
 1. 布局定位属性：display / position / float / clear / visibility / overflow
@@ -208,3 +208,18 @@ css属性值需要用到引号时，统一使用单引号
     border-radius: 10px;
 }
 ```
+
+##### 9. CSS3浏览器私有前缀写法
+
+CSS3 浏览器私有前缀在前，标准前缀在后
+```css
+/* 例如 */
+.className {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+}
+```
+更多关于浏览器私有前辍写法：<a href="https://www.zhihu.com/question/21387264" target="_blank">#Vendor-specific extensions</a>
