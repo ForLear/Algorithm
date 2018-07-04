@@ -39,6 +39,7 @@ HTML元素共有以下5种：
 <br/>
 ```
 更多关于元素及标签关闭：<a href="https://www.w3.org/TR/html5/syntax.html#elements-0" target="_blank">#Elements</a>
+<br>
 
 ### 2. 书写风格
 **HTML代码大小写**
@@ -51,6 +52,8 @@ HTML标签名、类名、标签属性和大部分属性值统一用小写
 <div class="PARAS"></div>
 <DIV CLASS="PARAS"></DIV>
 ```
+<br>
+
 ### 3. 类型属性
 不需要为 CSS、JS 指定类型属性，HTML5 中默认已包含
 ```html
@@ -62,6 +65,7 @@ HTML标签名、类名、标签属性和大部分属性值统一用小写
 <link rel="stylesheet" type="text/css" href="" >
 <script type="text/javascript" src="" ></script>
 ```
+<br>
 
 ### 4. 元素属性
 元素属性值使用双引号语法
@@ -74,6 +78,7 @@ HTML标签名、类名、标签属性和大部分属性值统一用小写
 <input type='text'>
 ```
 更多关于元素属性：<a href="https://www.w3.org/TR/html5/syntax.html#attributes-0" target="_blank">#Attributes</a>
+<br>
 
 ### 5. 特殊字符引用
 在 HTML 中不能使用小于号 “<” 和大于号 “>”等特殊字符，浏览器会将它们作为标签解析，若要正确显示，在 HTML 源代码中使用字符实体
@@ -85,6 +90,7 @@ HTML标签名、类名、标签属性和大部分属性值统一用小写
 <a href="#">tag>></a>
 ```
 更多关于符号引用：<a href="https://www.w3.org/TR/html5/syntax.html#character-references" target="_blank">#Character references</a>
+<br>
 
 ### 6. 代码缩进
 统一使用四个空格进行代码缩进，使得各编辑器表现一致（各编辑器有相关配置）
@@ -93,6 +99,7 @@ HTML标签名、类名、标签属性和大部分属性值统一用小写
     <a href="#"></a>
 </div>
 ```
+<br>
 
 ### 7. 代码嵌套
 元素嵌套规范，每个块状元素独立一行，内联元素可选
@@ -146,6 +153,7 @@ HTML标签名、类名、标签属性和大部分属性值统一用小写
 }
 ```
 **团队约定：统一使用展开格式书写样式**
+<br>
 
 ### 2. 代码大小写
 样式选择器，属性名，属性值关键字全部使用小写字母书写，属性字符串允许使用大小写。
@@ -160,6 +168,7 @@ HTML标签名、类名、标签属性和大部分属性值统一用小写
 	DISPLAY:BLOCK;
 }
 ```
+<br>
 
 ### 3. 选择器
 - 尽量少用通用选择器 *
@@ -176,6 +185,7 @@ HTML标签名、类名、标签属性和大部分属性值统一用小写
 #paras {}
 .paras div{}
 ```
+<br>
 
 ### 4. 代码缩进
 统一使用四个空格进行代码缩进，使得各编辑器表现一致（各编辑器有相关配置）
@@ -185,6 +195,7 @@ HTML标签名、类名、标签属性和大部分属性值统一用小写
     height: 100%;
 }
 ```
+<br>
 
 ### 5. 分号
 每个属性声明末尾都要加分号；
