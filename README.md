@@ -58,3 +58,51 @@ ___
 #className {}
 .className div{}
 ```
+
+##### 4. 代码缩进
+
+统一使用四个空格进行代码缩进，使得各编辑器表现一致（各编辑器有相关配置）
+```shell
+.className {
+    width: 100%;
+    height: 100%;
+}
+```
+
+##### 5. 分号
+
+每个属性声明末尾都要加分号；
+```shell
+.className {
+    width: 100%;
+    height: 100%;
+}
+```
+
+##### 6. 代码易读性
+
+左括号与类名之间一个空格，冒号与属性值之间一个空格
+```shell
+/* 推荐 */
+.className {
+    width: 100%;
+}
+
+/* 不推荐 */
+.className{
+    width:100%;
+}
+```
+
+逗号分隔的取值，逗号之后一个空格
+```shell
+/* 推荐 */
+.className {
+    box-shadow: 1px 1px 1px \#333, 2px 2px 2px \#ccc;
+}
+
+/* 不推荐 */
+.className{
+    width:100%;
+}
+```
