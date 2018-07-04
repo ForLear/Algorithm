@@ -55,6 +55,6 @@ ___
 
 /* 不推荐 */
 *{}
-'#'className {}
+'#className {}'
 .className div{}
 ```
