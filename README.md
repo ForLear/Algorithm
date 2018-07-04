@@ -106,3 +106,105 @@ ___
     width:100%;
 }
 ```
+
+为单个css选择器或新申明开启新行
+```css
+/* 推荐 */
+.className, 
+.className_logo, 
+.className_hd {
+    color: #ff0;
+}
+.nav{
+    color: #fff;
+}
+
+/* 不推荐 */
+.className,className_logo,.className_hd {
+    color: #ff0;
+}.nav{
+    color: #fff;
+}
+```
+
+颜色值 rgb() rgba() hsl() hsla() rect() 中不需有空格，且取值不要带有不必要的 0
+```css
+/* 推荐 */
+.className {
+    color: rgba(255,255,255,.5);
+}
+
+/* 不推荐 */
+.className {
+    color: rgba( 255, 255, 255, 0.5 );
+}
+```
+
+属性值十六进制数值能用简写的尽量用简写
+```css
+/* 推荐 */
+.className {
+    color: #fff;
+}
+
+/* 不推荐 */
+.className {
+    color: #ffffff;
+}
+```
+
+不要为 0 指明单位
+```css
+/* 推荐 */
+.className {
+    margin: 0 10px;
+}
+
+/* 不推荐 */
+.className {
+    margin: 0px 10px;
+}
+```
+
+##### 属性值引号
+
+css属性值需要用到引号时，统一使用单引号
+```css
+/* 推荐 */
+.className {
+    font-family: 'Hiragino Sans GB';
+}
+
+/* 不推荐 */
+.className {
+    font-family: "Hiragino Sans GB";
+}
+```
+
+##### 属性书写顺序
+
+建议遵循以下顺序：
+1. 布局定位属性：display / position / float / clear / visibility / overflow
+2. 自身属性：width / height / margin / padding / border / background
+3. 文本属性：color / font / text-decoration / text-align / vertical-align / white- space / break-word
+4. 其他属性（CSS3）：content / cursor / border-radius / box-shadow / text-shadow / background:linear-gradient …
+```css
+/* 例如 */
+.className {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+    padding: 20px 0;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    color: #333;
+    background: rgba(0,0,0,.5);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+}
+```
