@@ -40,6 +40,7 @@ HTML元素共有以下5种：
 ```
 更多关于元素及标签关闭：<a href="https://www.w3.org/TR/html5/syntax.html#elements-0" target="_blank">#Elements</a>
 <br>
+<br>
 
 ### 2. 书写风格
 **HTML代码大小写**
@@ -52,6 +53,7 @@ HTML标签名、类名、标签属性和大部分属性值统一用小写
 <div class="PARAS"></div>
 <DIV CLASS="PARAS"></DIV>
 ```
+<br>
 <br>
 
 ### 3. 类型属性
