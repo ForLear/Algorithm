@@ -151,7 +151,7 @@ HTML标签名、类名、标签属性和大部分属性值统一用小写
 ```css
 .paras { display: block;width: 50%; }
 ```
-一种是紧凑格式（Expanded）
+一种是展开格式（Expanded）
 ```javascript
 .paras {
     display: block;
@@ -684,33 +684,33 @@ JavaScript 在所有类 C 语言中是比较独特的，它不需要在每个语
 ### 19. 代码块空格
 ```javascript
 // 推荐
-if (a) {
+if(a) {
   b()
 }
 
-function a () {}
+function a() {}
 
 // 不推荐
-if (a){
+if(a){
   b()
 }
 
-function a (){}
+function a(){}
 ```
 **团队约定代码块前要添加空格**
 <br>
 <br>
 
 ### 20. 函数声明的空格
-当格式化一个函数，函数名或 function 关键字与左括号之间允许有空白。命名函数要求函数名和 function 关键字之间有空格，但是匿名函数要求不加空格。
+当格式化一个函数，函数名或 function 关键字与左括号之间允许有空白。命名函数与匿名函数和 function 关键字之间无需加空格。
 ```javascript
 // 推荐
-function func (x) {
+function func(x) {
   // ...
 }
 
 // 不推荐
-function func(x) {
+function func (x) {
   // ...
 }
 ```
@@ -726,3 +726,31 @@ var sum = 1 + 2
 var sum = 1+2
 ```
 **团队约定操作符前后都需要添加空格**
+<!-- ## Algorithm -- 算法 -- 算法思维
+
+
+**算法时间复杂度的表示法O(n²)、O(n)、O(1)、O(nlogn)**
+
+<a href="https://www.zhihu.com/question/21387264" target="_blank">算法事件复杂度解析</a>
+
+
+O(nlogn)级别的算法是最优算法时间复杂度，那为什么还要学习O(n^2)的排序算法?
+```shell
+1. 相对基础
+
+2. 编码简单,易于实现,是一些简单情景的首选
+
+3. 在一些特殊的情况下,简单的排序算法更有效
+
+4. 简单排序算法思想衍生出复杂排序算法
+
+5. 可能成为子过程,改进更复杂的排序算法
+```
+
+快速排序 (1种)
+
+冒泡排序 (1种/待备注)
+
+选择排序 (1种/待备注)
+
+希尔排序 (未实现) -->
