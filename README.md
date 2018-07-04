@@ -1,18 +1,14 @@
-# Front-End Coding Guidelines
-
-<br />
-
-### HTML编码格式规范
+# HTML编码格式规范
 <br />
 
 ___
 
-### CSS样式编码格式规范
+# CSS样式编码格式规范
 <br />
 
 **代码风格**
 
-##### 1. 代码格式化
+## 1. 代码格式化
 
 样式书写一般有两种格式：一种是紧凑格式（Compact）
 ```css
@@ -223,3 +219,4 @@ CSS3 浏览器私有前缀在前，标准前缀在后
 }
 ```
 更多关于浏览器私有前辍写法：<a href="https://www.zhihu.com/question/21387264" target="_blank">#Vendor-specific extensions</a>
+
