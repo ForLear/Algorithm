@@ -18,6 +18,29 @@ HTML元素共有以下5种：
 > 空元素只有一个开始标签，且不能为空元素设置结束标签。<br>
 > 外来元素可以有一个开始标签和配对的结束标签，或者只有一个自闭合的开始标签，且后者情况下该元素不能有结束标签。<br>
 
+**团队约定**
+为了能让浏览器更好的解析代码以及能让代码具有更好的可读性，有如下约定：
+- 所有具有开始标签和结束标签的元素都要写上起止标签，某些允许省略开始标签或和束标签的元素亦都要写上。
+- 空元素标签都不加 “/” 字符
+```html
+<!-- 推荐 -->
+<div>
+    <h1>我是h1标题</h1>
+    <p>我是一段文字，我有始有终，浏览器能正确解析</p>
+</div>
+
+<br>
+
+<!-- 不推荐 -->
+<div>
+    <h1>我是h1标题</h1>
+    <p>我是一段文字，我有始无终，浏览器亦能正确解析
+</div>
+
+<br/>
+```
+更多关于元素及标签关闭：<a href="https://www.w3.org/TR/html5/syntax.html#elements-0" target="_blank">#Elements</a>
+
 <br>
 <br>
 
@@ -236,5 +259,5 @@ CSS3 浏览器私有前缀在前，标准前缀在后
     border-radius: 10px;
 }
 ```
-更多关于浏览器私有前辍写法：<a href="https://www.zhihu.com/question/21387264" target="_blank">#Vendor-specific extensions</a>
+更多关于浏览器私有前辍写法：<a href="https://www.w3.org/TR/2011/REC-CSS2-20110607/syndata.html#vendor-keywords" target="_blank">#Vendor-specific extensions</a>
 
