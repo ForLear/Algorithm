@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>深搜算法</title>
+</head>
+<body>
+  
+</body>
+<script>
+  function dfs(arr, depth) {
+      for (var i = 0; i < arr[depth].length; i++) {
+        result[depth] = arr[depth][i]
+        console.log(result[depth])
+        if (depth != arr.length - 1) {
+          dfs(arr, depth + 1)
+        } else {
+          results.push(result.join(''))
+        }
+      }
+    }
+
+    function test(arr) {
+      results = []
+      result = []
+      dfs(arr, 0)
+      console.log(results.length, results.join(','))
+    }
+    garr = [
+      ['a', 'b', 'c', 'd'],
+      ['1', '2', '3', '4'],
+      ['w', 'x', 'y', 'z'],
+      ['!', '@', '#', '$'],
+      ['&', '%', '^', '&'],
+    ]
+    test(garr)
+</script>
+</html>
